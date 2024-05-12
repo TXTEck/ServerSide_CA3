@@ -42,8 +42,8 @@ public function destroy($id)
 {
     $post = Post::findOrFail($id);
 
-    // Check if the currently authenticated user is the owner of the post
-    if (auth()->id() !== $post->user_id) {
+    
+    if (!(auth()->id() === $post->user_id || auth()->user()->role === 'admin')){
         abort(403);
     }
 
@@ -58,8 +58,8 @@ public function show(Post $post)
 
 public function edit(Post $post)
 {
-    // Authorization to ensure only the owner can edit the post
-    if (auth()->id() !== $post->user_id) {
+    
+    if (!(auth()->id() === $post->user_id || auth()->user()->role === 'admin')){
         abort(403);
     }
 
@@ -68,8 +68,8 @@ public function edit(Post $post)
 
 public function update(Request $request, Post $post)
 {
-    // Authorization check
-    if (auth()->id() !== $post->user_id) {
+    
+    if (!(auth()->id() === $post->user_id || auth()->user()->role === 'admin')){
         abort(403);
     }
 
