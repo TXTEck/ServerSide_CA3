@@ -18,20 +18,27 @@
                         <img src="{{ asset('images/valorantLogo.png') }}" class="h-10" alt="Valorant Logo">
                     </div>
                     <div class="hidden md:flex items-center space-x-4">
-                    <a href="#" class="px-3 py-2 rounded-md text-2xl font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Home</a>
-                        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-2xl font-medium">Blogs</a>
+                    <a href="/" class="px-3 py-2 rounded-md text-2xl font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Home</a>
+                        <a href="{{route('posts.index')}}" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-2xl font-medium">posts</a>
                         
                     </div>
                 </div>
 
                 <div class="hidden md:flex items-center space-x-4">
                     @guest
-                        <a href="#" class="px-3 py-2 rounded-md text-2xl font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Login</a>
-                        <a href="#" class="px-3 py-2 rounded-md text-2xl font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Signup</a>
+                        <a href="{{ route('login') }}" class="px-3 py-2 rounded-md text-2xl font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Login</a>
+                        <a href="{{ route('register') }}" class="px-3 py-2 rounded-md text-2xl font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Signup</a>
                     @else
-                        <span>{{ Auth::user()->name }}</span>
-                        <a href="{{ route('logout') }}" class="px-3 py-2 rounded-md text-2xl font-medium text-red-500 bg-gray-700 hover:bg-gray-600">Logout</a>
-                    @endguest
+
+                    @auth
+                            <span>{{ Auth::user()->name }}</span>
+                            <!-- Logout Form -->
+                            <form action="{{ route('logout') }}" method="POST" style="display:inline;">
+                                @csrf
+                                <button type="submit" class="px-3 py-2 rounded-md text-2xl font-medium text-red-500 bg-gray-700 hover:bg-gray-600">Logout</button>
+                            </form>
+                        @endauth
+                        @endguest
                 </div>
             </div>
         </div>
