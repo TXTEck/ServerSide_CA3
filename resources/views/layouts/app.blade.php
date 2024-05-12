@@ -19,7 +19,7 @@
                     </div>
                     <div class="hidden md:flex items-center space-x-4">
                     <a href="/" class="px-3 py-2 rounded-md text-2xl font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Home</a>
-                        <a href="{{route('posts.index')}}" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-2xl font-medium">posts</a>
+                        <a href="{{route('posts.index')}}" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-2xl font-medium">Posts</a>
                         
                     </div>
                 </div>
@@ -31,7 +31,7 @@
                     @else
 
                     @auth
-                            <span>{{ Auth::user()->name }}</span>
+                            <span class="px-3 py-2 rounded-md text-2xl font-medium text-gray-300 hover:bg-gray-700"> Welcome, {{ Auth::user()->name }}</span>
                             <!-- Logout Form -->
                             <form action="{{ route('logout') }}" method="POST" style="display:inline;">
                                 @csrf

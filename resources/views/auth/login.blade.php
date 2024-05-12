@@ -6,7 +6,7 @@
         <div class="w-full">
             <section class="flex flex-col break-words bg-red-500 sm:border-1 sm:rounded-md sm:shadow-sm sm:shadow-lg">
 
-                <header class="text-4xl font-bold text-gray-800 text-center pb-14">
+                <header class="text-4xl font-bold text-gray-800 text-center pb-14 mt-7">
                     {{ __('Login') }}
                 </header>
 
@@ -19,27 +19,27 @@
                         </label>
 
                         <input id="email" type="email"
-                            class="form-input w-full bg-gray-800 @error('email') border-red-500 @enderror" name="email"
+                            class="form-input rounded w-full h-8 bg-gray-800 @error('email') border-red-500 @enderror" name="email"
                             value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                         @error('email')
-                        <p class="text-red-500 text-xs italic mt-4">
+                        <p class="text-white text-xs italic mt-4">
                             {{ $message }}
                         </p>
                         @enderror
                     </div>
 
                     <div class="flex flex-wrap">
-                        <label for="password" class="block text-gray-700 text-sm font-bold mb-2 sm:mb-4">
+                        <label for="password" class="block text-gray-700 font-bold mb-2 sm:mb-4">
                             {{ __('Password') }}:
                         </label>
 
                         <input id="password" type="password"
-                            class="form-input w-full bg-gray-800 @error('password') border-red-500 @enderror" name="password"
+                            class="form-input rounded w-full h-8 bg-gray-800 @error('password') border-red-500 @enderror" name="password"
                             required>
 
                         @error('password')
-                        <p class="text-red-500 text-xs italic mt-4">
+                        <p class="text-white text-xs italic mt-4">
                             {{ $message }}
                         </p>
                         @enderror
@@ -60,9 +60,9 @@
                         @endif
                     </div>
 
-                    <div class="flex flex-wrap">
+                    <div class="flex flex-wrap justify-center items-center">
                         <button type="submit"
-                        class="w-full select-none font-bold whitespace-no-wrap p-3 rounded-lg text-base leading-normal no-underline text-gray-100 bg-gray-500 hover:bg-gray-700 sm:py-4">
+                        class="w-6/12 select-none font-bold whitespace-no-wrap p-3 rounded-lg text-base leading-normal no-underline text-gray-100 bg-gray-500 hover:bg-gray-700 sm:py-4">
                             {{ __('Login') }}
                         </button>
 
