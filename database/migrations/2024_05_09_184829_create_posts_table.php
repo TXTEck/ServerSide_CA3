@@ -6,9 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 Class CreatePostsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     */
+
     public function up(): void
     {
         Schema::create('posts', function (Blueprint $table) {
@@ -22,9 +20,6 @@ Class CreatePostsTable extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('posts');
