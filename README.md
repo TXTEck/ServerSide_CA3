@@ -1,4 +1,4 @@
-## TFT Blog
+## Valorant Guide Blog
 
 •	Author: Xu Teck Tan, Wiktor Teter <br>
 
