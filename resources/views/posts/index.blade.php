@@ -3,7 +3,6 @@
 @section('content')
 <div class="container mx-auto px-4 py-4">
     @auth
-        <!-- Create Post Button -->
         <a href="{{ route('posts.create') }}" class="bg-red-500 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-300 ease-in-out transform hover:-translate-y-1">Create Post +</a>
     @endauth
     <div class="grid grid-cols-3 gap-6 mt-8">

@@ -33,9 +33,9 @@
                     @guest
                         <a href="{{ route('login') }}" class="px-3 py-2 rounded-md text-2xl font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Login</a>
                         <a href="{{ route('register') }}" class="px-3 py-2 rounded-md text-2xl font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Signup</a>
-                    @else
+                        @else
 
-                    @auth
+                        @auth
                             <span class="px-3 py-2 rounded-md text-2xl font-medium text-gray-300 hover:bg-gray-700"> Welcome, {{ Auth::user()->name }}</span>
 
                             <form action="{{ route('logout') }}" method="POST" style="display:inline;">
@@ -43,7 +43,7 @@
                                 <button type="submit" class="px-3 py-2 rounded-md text-2xl font-medium text-red-500 bg-gray-700 hover:bg-gray-600">Logout</button>
                             </form>
                         @endauth
-                        @endguest
+                    @endguest
                 </div>
             </div>
         </div>
