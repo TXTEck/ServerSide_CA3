@@ -19,10 +19,10 @@
             <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="description" required></textarea>
         </div>
         <div class="mb-4">
-            <label class="block text-white text-sm font-bold mb-2" for="content">
+            <label class="block text-white text-sm font-bold mb-2 " for="content">
                 Content
             </label>
-            <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="content" required></textarea>
+            <textarea class=" h-96 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="content" required></textarea>
         </div>
         <div class="mb-4">
             <label class="block text-white text-sm font-bold mb-2" for="image">
