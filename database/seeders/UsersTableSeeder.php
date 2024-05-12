@@ -14,10 +14,7 @@ class UsersTableSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
-        DB::table('users')->delete();
-
-  
+    {  
         DB::table('users')->insert([
             'name' => 'Admin User',
             'email' => 'admin@admin.com',
