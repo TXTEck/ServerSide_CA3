@@ -35,8 +35,8 @@ class PostController extends Controller
     }
     public function index()
 {
-    $posts = Post::all();  // Retrieves all posts from the database
-    return view('posts.index', compact('posts'));  // Returns the view with all posts
+    $posts = Post::all();  
+    return view('posts.index', compact('posts')); 
 }
 public function destroy($id)
 {

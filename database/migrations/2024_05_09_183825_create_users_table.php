@@ -6,9 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 Class CreateUsersTable extends Migration
 {
-    /**
-     * Run the migrations.
-     */
+
     public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
@@ -22,10 +20,6 @@ Class CreateUsersTable extends Migration
             $table->timestamps();
         });
     }
-
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('users');
