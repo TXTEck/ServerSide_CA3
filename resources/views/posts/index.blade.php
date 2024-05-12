@@ -4,7 +4,7 @@
 @section('content')
 <div class="container mx-auto px-4 py-4">
     @auth
-        <a href="{{ route('posts.create') }}" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Create Post</a>
+        <a href="{{ route('posts.create') }}" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Create Post +</a>
     @endauth
     <div class="grid grid-cols-3 gap-6 mt-8">
         @foreach ($posts as $post)

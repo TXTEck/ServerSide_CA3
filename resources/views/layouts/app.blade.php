@@ -32,7 +32,7 @@
 
                     @auth
                             <span class="px-3 py-2 rounded-md text-2xl font-medium text-gray-300 hover:bg-gray-700"> Welcome, {{ Auth::user()->name }}</span>
-                            <!-- Logout Form -->
+
                             <form action="{{ route('logout') }}" method="POST" style="display:inline;">
                                 @csrf
                                 <button type="submit" class="px-3 py-2 rounded-md text-2xl font-medium text-red-500 bg-gray-700 hover:bg-gray-600">Logout</button>
